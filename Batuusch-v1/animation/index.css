@@ -1,0 +1,124 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* .a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    height: 300px;
+    border: 10px solid white;
+    position: relative;
+    border-left-color: red;
+     border-right-color: red;
+     animation: aa 2s linear infinite;
+
+}
+@keyframes aa {
+    0% {
+        transform: rotate(0deg);
+       
+    }
+    
+     100% {
+         transform: rotate(360deg);
+        
+        }
+    } */
+
+.loader {
+  font-size: 200px;
+  color: white;
+  display: flex;
+  gap: 100px;
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+  animation: text 2s linear infinite;
+  border: 10px solid white;
+  border-color: black red;
+  color: black;
+}
+
+span {
+  width: 80px;
+  height: 80px;
+  border: 9px solid black;
+  border-radius: 50%;
+  position: absolute;
+  left: 64%;
+  top: 32%;
+  border-bottom-color: red;
+  animation: pine 1s linear infinite;
+}
+img {
+  padding: 10px;
+  margin-bottom: 40px;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  gap: 10px;
+  animation: zurag 2s linear infinite;
+}
+@keyframes zurag {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 1;
+  }
+}
+
+@keyframes pine {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes text {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+    opacity: 0.5;
+    border-top-color: red;
+    border-bottom-color: black;
+       border-left-color: black;
+    border-right-color: black;
+  }
+  50% {
+    transform: scale(1.2);
+    border-top-color: black;
+    border-bottom-color: black;
+       border-left-color: black;
+    border-right-color: red;
+ 
+  }
+  75% {
+    transform: scale(1.1);
+    border-top-color: black;
+    border-bottom-color: red;
+       border-left-color: black;
+    border-right-color: black;
+   
+  }
+  100% {
+    transform: scale(1);
+    border-top-color: black;
+    border-bottom-color: black;
+       border-left-color: red;
+    border-right-color: black;
+
+    
+  }
+}
