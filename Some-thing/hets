@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="index.js"></script>
+     <style>
+#container{
+    width: 200px;
+    height: 200px;
+    border:2px solid black;
+}
+#btn{
+    width: 100px;
+    height: 40px;
+}
+     </style>
+</head>
+<body>
+  <div id="container"></div>
+  <button id="btn">click me</button>
+    
+</body>
+<script>
+const callDiv =document.getElementById("container");
+const buttonN =document.getElementById("btn")
+const bgChanger = () =>{
+  
+    callDiv.style ="background-color: red"
+    
+   
+} 
+buttonN.addEventListener("click" , bgChanger)
+</script>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+      margin: 0 auto;
+    }
+  </style>
+  <body>
+    <h1>Welcome to Pinecone</h1>
+    <p>Pinecone</p>
+    <button>CLICK ME</button>
+  </body>
+  <script>
+    const H1 = document.getElementsByTagName("h1")[0];
+    const P = document.getElementsByTagName("p")[0];
+    const B = document.getElementsByTagName("button")[0];
+    const changerEL = () => {
+      H1.innerText = "Hello students";
+      P.innerText = "Pinecone is Better";
+      P.style = "background-color:red;";
+    };
+    B.addEventListener("click", changerEL);
+  </script>
+</html>
+
+
+const boxNeg = ()=>{
+    boxes[0].innerText ="X"
+    boxes[0].style = "font-size:100px; margin:0 auto;"
+}
+boxes[0].addEventListener("click" , boxNeg)
+const boxHOYR = () => {
+  boxes[1].innerText = "X";
+  boxes[1].style = "font-size:100px; margin:0 auto;";
+};
+boxes[1].addEventListener("click", boxHOYR);
+const boxGURAV = () => {
+  boxes[2].innerText = "X";
+  boxes[2].style = "font-size:100px; margin:0 auto;";
+};
+boxes[2].addEventListener("click", boxGURAV);
+const boxDOROV = () => {
+  boxes[3].innerText = "X";
+  boxes[3].style = "font-size:100px; margin:0 auto;";
+};
+boxes[3].addEventListener("click", boxDOROV);
+const boxTAV = () => {
+  boxes[4].innerText = "X";
+  boxes[4].style = "font-size:100px; margin:0 auto;";
+};
+boxes[4].addEventListener("click", boxTAV);
+const boxZURGA = () => {
+  boxes[5].innerText = "X";
+  boxes[5].style = "font-size:100px; margin:0 auto;";
+};
+boxes[5].addEventListener("click", boxZURGA);
+const boxDOLOO = () => {
+  boxes[6].innerText = "X";
+  boxes[6].style = "font-size:100px; margin:0 auto;";
+};
+boxes[6].addEventListener("click", boxDOLOO);
+const boxNAIM = () => {
+  boxes[7].innerText = "X";
+  boxes[7].style = "font-size:100px; margin:0 auto;";
+};
+boxes[7].addEventListener("click", boxNAIM);
+const boxYS = () => {
+  boxes[8].innerText = "X";
+  boxes[8].style = "font-size:100px; margin:0 auto;";
+};
+boxes[8].addEventListener("click", boxYS);
+
+
+const inputNeg = document.getElementsByClassName("ehniitoo")[0];
+const inputHoyr = document.getElementsByClassName("hoyrdahitoo")[0];
+const inputGurav = document.getElementsByClassName("input3")[0];
+const buttonNeg = document.getElementsByClassName("btn1")[0];
+const buttonHoyr = document.getElementsByClassName("btn2")[0];
+console.log(inputHoyr);
+const SoninYm1 = () => {
+  inputNeg.innerHTML = Number(Math.floor(Math.random() * 100));
+  inputHoyr.innerHTML = Number(Math.floor(Math.random() * 100));
+};
+SoninYm1();
+console.log(inputHoyr);
+const SoninYm = () => {
+      inputNeg.innerHTML = Number(Math.floor(Math.random() * 100));
+      inputHoyr.innerHTML = Number(Math.floor(Math.random() * 100));
+  if (Number(inputNeg.innerHTML) + Number(inputHoyr.innerHTML) === Number(inputGurav)) {
+    alert("it/'s right");
+  } else {
+    alert("Wrong");
+  }
+
+};
+buttonNeg.addEventListener("click", SoninYm);
+
+  console.log(inputNeg);
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=DC , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="maincontainer">
+       <h1 class="ehniitoo"></h1>
+       <h2 class="hoyrdahitoo"></h2>
+        <input class="input3" type="number">
+    </div>
+    <div id="secondcontainer">
+        <button class="btn1">Check</button>
+        <button class="btn2">Restart</button>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #maincontainer {
+      width: 600px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .numbercontainer {
+      width: 500px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .btncontainer {
+      width: 400px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .firstnumber {
+      width: 100px;
+      height: 40px;
+      text-align: center;
+      border: 1px solid black;
+    }
+    .secondnumber {
+      width: 100px;
+      height: 40px;
+      text-align: center;
+      border: 1px solid black;
+    }
+    .input1 {
+      width: 100px;
+      height: 35px;
+    }
+  </style>
+  <body>
+    <div id="maincontainer">
+      <div class="numbercontainer">
+        <div class="firstnumber"></div>
+        <div class="secondnumber"></div>
+        <input class="input1" type="text" />
+      </div>
+      <div class="btncontainer">
+        <button class="btn1">Check</button>
+        <button class="btn2">Restart</button>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js">
+    const fisrtNumber =document.getElementsByClassName("firstnumber")[0];
+        const secondNumber =document.getElementsByClassName("secondnumber")[0];
+        const inputNumber =document.getElementsByClassName("input1")[0];
+        const fisrtButton =document.getElementsByClassName("btn1")[0];
+          const secondButton =document.getElementsByClassName("btn2")[0];
+          function SUM() {
+       fisrtNumber.innerHTML = Math.floor(Math.random()*100)
+         secondNumber.innerHTML= Math.floor(Math.random()*100)
+
+
+          } SUM()
+  </script>
+</html>
