@@ -29,3 +29,188 @@ for (let i = 0; i < howManyInputs; i++) {
     }
   });
 }
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="maincontainer">
+      <h1>To Do List</h1>
+      <div class="middle-container">
+        <input type="text" name="" id="" />
+        <button>click</button>
+      </div>
+      <div class="listcontainer">
+        <button>delete</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const input1 = document.getElementsByTagName("input")[0];
+    const button1 = document.getElementsByTagName("button")[0];
+    const button2 = document.getElementsByTagName("button")[1];
+    const listcon = document.getElementsByClassName("listcontainer")[0];
+    console.log(button1);
+
+    function toDo() {
+      const listowner = document.createElement("p");
+      listcon.appendChild(listowner);
+      console.log(listowner);
+      listowner.innerText = "-"+(input1.value);
+    }
+    button1.addEventListener("click", toDo);
+    function delteEl() {
+     const a = document.querySelector("p")
+     
+    
+    }
+    button2.addEventListener("click", delteEl);
+    
+  </script>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>click</button>
+      <button>click</button>
+  </body>
+  <script>
+    const btn = document.getElementsByTagName("button")[0];
+    const btn1 = document.getElementsByTagName("button")[1];
+    function url() {
+      let urll =
+        "https://pinecone-assignments.vercel.app/assignments/dom/medium/todo-list/";
+      window.open(urll);
+    }
+    btn.addEventListener("click", url);
+    function con() {
+      let a = confirm("a")
+      
+    }btn1.addEventListener("click", con );
+  </script>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="addTimerButton"></div>
+  <div id="timersContainer"></div>
+</body>
+<script>
+
+    const addTimerButton = document.getElementById('addTimerButton');
+    const timersContainer = document.getElementById('timersContainer');
+
+    addTimerButton.addEventListener('click', () => {
+      const timer = document.createElement('div');
+      timer.className = 'timer';
+
+      const timerDisplay = document.createElement('span');
+      timerDisplay.textContent = '0';
+
+      const startButton = document.createElement('button');
+      startButton.textContent = 'Start';
+
+      const pauseButton = document.createElement('button');
+      pauseButton.textContent = 'Pause';
+
+      const resetButton = document.createElement('button');
+      resetButton.textContent = 'Reset';
+
+      timer.appendChild(timerDisplay);
+      timer.appendChild(startButton);
+      timer.appendChild(pauseButton);
+      timer.appendChild(resetButton);
+      timersContainer.appendChild(timer);
+
+      let seconds = 0;
+      let interval;
+
+      startButton.addEventListener('click', () => {
+        if (!interval) {
+          interval = setInterval(() => {
+            seconds++;
+            timerDisplay.textContent = seconds;
+          }, 1000);
+        }
+      });
+
+      pauseButton.addEventListener('click', () => {
+        if (interval) {
+          clearInterval(interval);
+          interval = null;
+        }
+      });
+
+      resetButton.addEventListener('click', () => {
+        clearInterval(interval);
+        interval = null;
+        seconds = 0;
+        timerDisplay.textContent = seconds;
+      });
+    });
+  
+</script>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="maincntainer">
+      <h1>To do list</h1>
+      <div class="middlecontainer">
+        <input type="text" />
+        <button>Click</button>
+      </div>
+      <div id="listowner"></div>
+    </div>
+  </body>
+  <script>
+    const input1 = document.getElementsByTagName("input")[0];
+    const btn = document.getElementsByTagName("button")[0];
+    const listowner = document.getElementById("listowner");
+    function toDo() {
+      const remover = document.createElement("button");
+      const listHolder = document.createElement("p");
+      const valueHolder = document.createElement("div");
+      listowner.appendChild(valueHolder);
+      valueHolder.appendChild(listHolder);
+      valueHolder.appendChild(remover);
+      listHolder.innerText = "-" + input1.value;
+      remover.innerText = "Delete";
+      valueHolder.style =
+        "display:flex; gap:10px; height:20px ; align-items:center; padding-top:20px;";
+      remover.style = "height:20px";
+    }
+    btn.addEventListener("click", toDo);
+    remover.addEventListener("click", () => {
+      listHolder.innerText = " "
+      remover.innerText = " ";
+    });
+  </script>
+</html>
