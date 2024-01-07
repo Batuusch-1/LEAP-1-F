@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+body {
+}
+#maincontainer {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./zurag/mountain-artwork-lake-relaxed.jpg);
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 0;
+  background-size: cover;
+}
+#bourds {
+  display: flex;
+  gap: 10px;
+  margin-top: 100px;
+  
+}
+.bourd {
+  width: 310px;
+  padding: 8px;
+  background-color: #ebecf0;
+  border-radius: 10px;
+  height: fit-content;
+}
+.head {
+  display: flex;
+  gap: 5px;
+  text-align: center;
+  padding: 10px;
+}
+.head h1 {
+  font-size: 15px;
+}
+.add-button {
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+}
+.add-button:hover {
+  background-color: gray;
+  border-radius: 10px;
+}
+
+.second-screen {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.baiter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.show {
+  display: flex;
+}
+.ss-bourd {
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 2;
+}
+.ss-bourd h1 {
+  padding: 10px;
+}
+.first-input {
+  display: flex;
+  flex-direction: column;
+}
+.first-input label {
+  margin-left: 10px;
+  font-size: 15x;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.first-input input {
+  width: 90%;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+.second-input {
+  display: flex;
+  flex-direction: column;
+}
+.second-input label {
+  margin-left: 10px;
+  font-size: 15x;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.second-input input {
+  width: 90%;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+.selector-1 {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.selector-1 select {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+}
+.selector-1 label {
+  font-size: 15x;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.selector-2 label {
+  font-size: 15x;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.selector-2 {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.selector-2 select {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+}
+.ss-button {
+  width: 90%;
+  background-color: black;
+  text-align: center;
+  height: 40px;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.valuedivs {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 5px;
+  gap: 5px  ;
+}
+li{
+  list-style-type: none;
+}
+.box {
+  display: flex;
+  width: 70%;
+  margin-left: 20px;
+  justify-content: space-between;   
+  border: 1px  solid rgba(0, 0, 0, 0.416);
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgba(29, 217, 170, 0.902);
+}
+.trasheandedit {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+i{
+  cursor: pointer;
+}
+    </style>
+  </head>
+  <body>
+    <div id="maincontainer">
+      <!-- --------------------- -->
+      <div id="bourds">
+        <!-- --------------------- -->
+        <div class="bourd">
+          <div class="head">
+            <h1 class="valueclass">To Do</h1>
+            <p id="qw">0</p>
+          </div>
+          <div
+            id="add-value"
+            class="valuedivs"
+            ondragover="allowDrop(event)"
+            ondrop="drop(event, 'To do')"
+          ></div>
+          <div onclick="show()" class="add-button">
+            <div>+</div>
+            <div><h4>Add list</h4></div>
+          </div>
+        </div>
+        <!-- --------------------- -->
+        <div class="bourd">
+          <div class="head">
+            <h1 class="valueclass">In Progress</h1>
+            <p>0</p>
+          </div>
+          <div
+            id="add-value1"
+            class="valuedivs"
+            ondragover="allowDrop(event)"
+            ondrop="drop(event, 'in Progress')"
+          ></div>
+          <div onclick="show()" class="add-button">
+            <div>+</div>
+            <div><h4>Add list</h4></div>
+          </div>
+        </div>
+        <!-- --------------------- -->
+        <div class="bourd">
+          <div class="head">
+            <h1 class="valueclass">Stuck</h1>
+            <p>0</p>
+          </div>
+          <div
+            id="add-value2"
+            class="valuedivs"
+            ondragover="allowDrop(event)"
+            ondrop="drop(event, 'Stuck')"
+          ></div>
+          <div onclick="show()" class="add-button">
+            <div>+</div>
+            <div><h4>Add list</h4></div>
+          </div>
+        </div>
+        <!-- --------------------- -->
+        <div class="bourd">
+          <div class="head">
+            <h1 class="valueclass">Done</h1>
+            <p>0</p>
+          </div>
+          <div
+            id="add-value3"
+            class="valuedivs"
+            ondragover="allowDrop(event)"
+            ondrop="drop(event, 'Done')"
+          ></div>
+          <div onclick="show()" class="add-button">
+            <div>+</div>
+            <div><h4>Add list</h4></div>
+          </div>
+        </div>
+        <!-- --------------------- -->
+      </div>
+      <!-- --------------------- -->
+    </div>
+    <!-- added screen -->
+    <div class="second-screen">
+      <!-- --------------------- -->
+      <div onclick="hide()" class="baiter"></div>
+      <div class="ss-bourd">
+        <!-- --------------------- -->
+        <h1>Add task</h1>
+        <div class="first-input">
+          <label>Title</label>
+          <input id="title-input" type="text" />
+        </div>
+        <div class="second-input">
+          <label>Description</label>
+          <input id="description-input" type="text" />
+        </div>
+        <!-- --------------------- -->
+        <div class="selector-1">
+          <label>Status</label>
+          <select name="" id="status-input">
+            <option id="value-1" value="To do">To do</option>
+            <option id="value-2" value="in Progress">in Progress</option>
+            <option id="value-3" value="Stuck">Stuck</option>
+            <option id="value-4" value="Done">Done</option>
+          </select>
+        </div>
+        <!-- --------------------- -->
+        <div class="selector-2">
+          <label>Priority</label>
+          <select name="" id="priority-input">
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+        </div>
+        <button onclick="addTodo()" class="ss-button">Add click</button>
+        <!-- --------------------- -->
+      </div>
+      <!-- --------------------- -->
+    </div>
+  </body>
+  <script src="script.js">
+  // second screen gargaj irdeg function
+const show = () => {
+  document.getElementsByClassName("second-screen")[0].classList.add("show");
+};
+// second screen gargaj irdeg function
+// second screen alga bolgodog FUNCTION
+const hide = () => {
+  document.getElementsByClassName("second-screen")[0].classList.remove("show");
+};
+// second screen alga bolgodog FUNCTION
+// delete icon ajilah function
+const trashIcon = (event) => {
+  for (let i = 0; i < boxArray.length; i++) {
+    if (boxArray[i].id == event) {
+      boxArray.splice(i, 1);
+    }
+  }
+  render();
+};
+// delete icon ajilah function
+// input values---------------
+const boxArray = [];
+const statusInputValue = document.getElementById("status-input").value;
+// input values---------------
+// value nuudiig objected avaaad newarray ru pushlene
+const addTodo = () => {
+  const titleInputValue = document.getElementById("title-input").value;
+  const descriptionInputValue =
+    document.getElementById("description-input").value;
+  const statusInputValue = document.getElementById("status-input").value;
+  const priorityInputValue = document.getElementById("priority-input").value;
+  const inputObj = {
+    id:Math.floor(Math.random() * (999 - 0) + 0),
+    title: titleInputValue,
+    Description: descriptionInputValue,
+    Status: statusInputValue,
+    Priority: priorityInputValue,
+  };
+
+  boxArray.push(inputObj);
+  hide();
+  render();
+
+};
+// value nuudiig objected avaaad newarray ru pushlene
+// inputuudiig html ruu horvuulene
+const render = () => {
+  let toDoContainerElement = "";
+  let inProgressContainerElement = "";
+  let stuckContainerElement = "";
+  let doneContainerElement = "";
+
+  boxArray.forEach((el, i) => {
+    const boxHtml = `<div ondragstart="drag(event)" class="box" draggable="true" id="${el.id}">
+      <ul>
+        <li>${el.title}</li>
+        <li>${el.Description}</li>
+        <li>${el.Status}</li>
+        <li>${el.Priority}</li>
+      </ul>
+      <div class="trasheandedit">
+        <i onclick="trashIcon(${el.id})" class="fa-solid fa-trash"></i>
+        <i class="fa-solid fa-pen-to-square"></i>
+      </div>
+    </div>`;
+
+    switch (el.Status) {
+      case "To do":
+        toDoContainerElement += boxHtml;
+        break;
+      case "in Progress":
+        inProgressContainerElement += boxHtml;
+        break;
+      case "Stuck":
+        stuckContainerElement += boxHtml;
+        break;
+      case "Done":
+        doneContainerElement += boxHtml;
+        break;
+      default:
+        break;
+    }
+  });
+
+  document.getElementById("add-value").innerHTML = toDoContainerElement;
+  document.getElementById("add-value1").innerHTML = inProgressContainerElement;
+  document.getElementById("add-value2").innerHTML = stuckContainerElement;
+  document.getElementById("add-value3").innerHTML = doneContainerElement;
+};
+
+// inputuudiig html ruu horvuulene-----------------------------------
+// elementuudiig drag hiideg function
+const allowDrop = (event) => {
+  event.preventDefault();
+};
+const drag = (event) => {
+  event.dataTransfer.setData("text", event.target.id);
+};
+const drop = (event) => {
+  event.preventDefault();
+  const boxId = event.dataTransfer.getData("text");
+  const draggedElement = document.getElementById(boxId);
+  const newStatus = event.target.parentElement.id.replace("add-value", ""); // Extract the status from the container ID
+
+  // Update the status of the dragged element
+  boxArray.forEach((el) => {
+    if (el.id == boxId) {
+      el.Status = newStatus;
+    }
+  });
+
+  // Move the dragged element to the new container
+  event.target.appendChild(draggedElement);
+
+  render(); // Re-render the board with the updated statuses
+  console.log(`Item ${boxId} moved to status: ${newStatus}`);
+};
+
+// elementuudiig drag hiideg function
+
+
+  </script>
+</html>

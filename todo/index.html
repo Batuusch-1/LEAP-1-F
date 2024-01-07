@@ -18,16 +18,16 @@
       <!-- --------------------- -->
       <div id="bourds">
         <!-- --------------------- -->
-        <div class="bourd">
+        <div class="bourd" id="Todo">
           <div class="head">
-            <h1>To Do</h1>
-            <p id="qw">0</p>
+            <h1 class="valueclass">To Do</h1>
+            <p class="task-count">0</p>
           </div>
           <div
             id="add-value"
             class="valuedivs"
             ondragover="allowDrop(event)"
-            ondrop="drop(event)"
+            ondrop="drop(event, 'To do')"
           ></div>
           <div onclick="show()" class="add-button">
             <div>+</div>
@@ -35,16 +35,16 @@
           </div>
         </div>
         <!-- --------------------- -->
-        <div class="bourd">
+        <div class="bourd"  id="in-Progress">
           <div class="head">
-            <h1>In Progress</h1>
-            <p>0</p>
+            <h1 class="valueclass">In Progress</h1>
+            <p class="task-count">0</p>
           </div>
           <div
             id="add-value1"
             class="valuedivs"
             ondragover="allowDrop(event)"
-            ondrop="drop(event)"
+            ondrop="drop(event, 'in-Progress')"
           ></div>
           <div onclick="show()" class="add-button">
             <div>+</div>
@@ -52,16 +52,16 @@
           </div>
         </div>
         <!-- --------------------- -->
-        <div class="bourd">
+        <div class="bourd" id="Stuck">
           <div class="head">
-            <h1>Stuck</h1>
-            <p>0</p>
+            <h1 class="valueclass">Stuck</h1>
+            <p class="task-count">0</p>
           </div>
           <div
             id="add-value2"
             class="valuedivs"
             ondragover="allowDrop(event)"
-            ondrop="drop(event)"
+            ondrop="drop(event, 'Stuck')"
           ></div>
           <div onclick="show()" class="add-button">
             <div>+</div>
@@ -69,16 +69,16 @@
           </div>
         </div>
         <!-- --------------------- -->
-        <div class="bourd">
+        <div class="bourd"  id="Done">
           <div class="head">
-            <h1>Done</h1>
-            <p>0</p>
+            <h1 class="valueclass">Done</h1>
+            <p class="task-count">0</p>
           </div>
           <div
             id="add-value3"
             class="valuedivs"
             ondragover="allowDrop(event)"
-            ondrop="drop(event) "
+            ondrop="drop(event, 'Done')"
           ></div>
           <div onclick="show()" class="add-button">
             <div>+</div>
@@ -109,7 +109,7 @@
           <label>Status</label>
           <select name="" id="status-input">
             <option id="value-1" value="To do">To do</option>
-            <option id="value-2" value="in Progress">in Progress</option>
+            <option id="value-2" value="in-Progress">in-Progress</option>
             <option id="value-3" value="Stuck">Stuck</option>
             <option id="value-4" value="Done">Done</option>
           </select>
@@ -129,5 +129,7 @@
       <!-- --------------------- -->
     </div>
   </body>
-  <script src="script.js"></script>
+  <script src="script.js">
+    
+  </script>
 </html>
