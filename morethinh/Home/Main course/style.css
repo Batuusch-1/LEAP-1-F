@@ -1,0 +1,40 @@
+body{
+    width: 100vw;
+    height: 100vh;
+   margin: 0px auto;
+   background-color: aqua;
+
+
+}
+.container{
+width: 100vw;
+height: 100vh;
+background-color: #f4f4f4;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.head-1{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   width: 100px;
+ 
+}
+.zurag{
+    display: flex;
+    gap: 66px   ;
+    margin-top: 25px;
+}
+.head-1 .garchig{
+    color: #303030;
+text-align: center;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+}
+.q :hover{
+    color: bisque;
+}

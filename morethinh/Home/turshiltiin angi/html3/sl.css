@@ -1,0 +1,35 @@
+body{   width: 100vh;
+    background-color:#E9EBEC;
+    border: 20px ;
+    padding-bottom: 33px;
+    margin: 0px auto;
+}
+
+
+.main{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    
+   
+
+}
+.logo{
+    margin-top: 44px;
+
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+.profile{
+  margin-top: 108px;
+    width: 631px;
+    height: 215px;
+    background-color: red;
+}

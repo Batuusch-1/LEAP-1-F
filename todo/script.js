@@ -120,6 +120,4 @@ const markAsDone = (taskId) => {
   taskToMarkAsDone.Status = "Done";
   render();
 };
-const count =()=>{
-  
-}
+

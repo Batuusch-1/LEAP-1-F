@@ -59,3 +59,4 @@ const combineArr = array10.map((el, i) => {
   return el + "-" + array11[i];
 });
 console.log(combineArr);
+console.log(12);
